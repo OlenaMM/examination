@@ -3,3 +3,12 @@
 *{
     font-family: 'EB Garamond';
 }
+
+p{
+    text-align: justify;
+    font-size: 1rem;
+}
+
+img {
+    min-height: 100%;
+}
