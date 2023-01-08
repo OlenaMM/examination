@@ -1,5 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
 
+
+@media (min-width: 901px){
+    .carousel-text {
+        font-size: 12px;
+    }
+
+    .carousel-title{
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .btn-carousel{
+        font-size: x-small;
+    }
+
+}
+
+@media (min-width: 769px) and (max-width: 900px){
+    .carousel-text {
+        font-size: 12px;
+    }
+
+    .carousel-title{
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .btn-carousel{
+        font-size: x-small;
+    }
+    
+    .content-item{
+        top: 5%!important;
+    }
+}
+
+
+
 @media (min-width: 576px) and (max-width: 768px) {
     p {
         font-size: 11px;
@@ -25,6 +63,24 @@
     .pics3, .pics4 {
         display: none;
     }
+
+    .carousel-text {
+        font-size: 10px;
+    }
+
+    .carousel-title{
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .btn-carousel{
+        font-size: x-small;
+    }
+
+    .content-item{
+        top: 15%!important;
+    }
+
 }
 
 @media (max-width: 575px){
@@ -40,14 +96,35 @@
         display: none;
     }
 
+    .carousel-text {
+        font-size: 10px;
+        margin: auto;
+    }
+
+    .carousel-title{
+        font-size: 12px;
+    }
+
+    .btn-carousel{
+        font-size: x-small;
+    }
+
+    .content-item{
+        top: 5%!important;
+    }
+
+    body{
+        margin: 0;
+    }
+
 }
-
-
-
 
 *{
     font-family: 'EB Garamond';
-  
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 body {
@@ -88,4 +165,52 @@ img {
 
 .card4, .card5{
     border-right: 1.5px solid rgb(216, 214, 214);
+}
+
+.carousel-block{
+    position: relative;
+}
+
+.carousel-block:hover .actions-wrapper{
+  display: block;
+}
+
+.actions-wrapper{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    display: none;
+    z-index: 99;
+}
+
+.actions-wrapper.left{
+    left: 0;
+    top: 40%;
+}
+
+.actions-wrapper.right{
+    right: 0;
+    top: 40%;
+}
+
+.content-wrapper{
+    position: relative;
+}
+
+.content-wrapper:hover .content-item{
+    display: block;
+}
+
+.content-wrapper:hover .content-img{
+    opacity: 90%;
+}
+
+
+.content-item{
+    position: absolute;
+    top: 25%;
+    display: none;
+    width: 100%;
+    height: 100%;
 }
